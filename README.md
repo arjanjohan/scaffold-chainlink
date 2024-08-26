@@ -1,11 +1,32 @@
-# 🏗 Scaffold-ETH 2
+# 🏗 Scaffold-ETH 2 Chainlink Extension
 
 <h4 align="center">
   <a href="https://docs.scaffoldeth.io">Documentation</a> |
   <a href="https://scaffoldeth.io">Website</a>
 </h4>
 
-🧪 An open-source, up-to-date toolkit for building decentralized applications (dapps) on the Ethereum blockchain. It's designed to make it easier for developers to create and deploy smart contracts and build user interfaces that interact with those contracts.
+## TODO
+To-do list for this hackathon:
+- Create contracts/pages/components for all Chainlink features:
+  - CCIP
+    - Arbitrary Messaging
+    - Token Transfers
+    Programmable Token Transfers
+  - Data Feeds
+    - Price Feeds
+    - Proof of Reserve Feeds
+    - Rate and Volatility Feeds
+    - L2 uptime feeds
+  - Data Steams
+  - Functions
+  - Automation
+    - Time based
+    - Log Trigger
+    - Custom Logic
+  - VRF
+    - Direct funding vs Subscription
+
+<!-- 🧪 An open-source, up-to-date toolkit for building decentralized applications (dapps) on the Ethereum blockchain. It's designed to make it easier for developers to create and deploy smart contracts and build user interfaces that interact with those contracts.
 
 ⚙️ Built using NextJS, RainbowKit, Hardhat, Wagmi, Viem, and Typescript.
 
@@ -77,4 +98,4 @@ To know more about its features, check out our [website](https://scaffoldeth.io)
 
 We welcome contributions to Scaffold-ETH 2!
 
-Please see [CONTRIBUTING.MD](https://github.com/scaffold-eth/scaffold-eth-2/blob/main/CONTRIBUTING.md) for more information and guidelines for contributing to Scaffold-ETH 2.
+Please see [CONTRIBUTING.MD](https://github.com/scaffold-eth/scaffold-eth-2/blob/main/CONTRIBUTING.md) for more information and guidelines for contributing to Scaffold-ETH 2. -->
