@@ -2,24 +2,24 @@
 interface NetworkConfig {
   name: string;
   chainId: number;
-  ccipChainId: number;
+  ccipChainId: BigInt;
 }
 
 export const networks: NetworkConfig[] = [
   {
     name: "Sepolia",
     chainId: 11155111,
-    ccipChainId: 16015286601757825753,
+    ccipChainId: 16015286601757825753n,
   },
   {
     name: "OP Sepolia",
-    chainId: 5224473277236331295,
-    ccipChainId: 3,
+    chainId: 11155420,
+    ccipChainId: 5224473277236331295n,
   },
   {
     name: "Avalanche Fuji",
     chainId: 43113,
-    ccipChainId: 14767482510784806043,
+    ccipChainId: 14767482510784806043n,
   },
 ];
 
