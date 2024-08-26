@@ -3,14 +3,14 @@
 import { useRef, useState } from "react";
 import { useAccount } from "wagmi";
 import { ChevronDownIcon } from "@heroicons/react/24/outline";
+import { LinkBalance } from "~~/components/chainlink/LinkBalance";
 import { NetworkOptions } from "~~/components/scaffold-eth/RainbowKitCustomConnectButton/NetworkOptions";
 import { useOutsideClick } from "~~/hooks/scaffold-eth";
-import { useScaffoldReadContract, useScaffoldWriteContract, useDeployedContractInfo } from "~~/hooks/scaffold-eth";
-import networks from "~~/utils/chainlink/networks";
-import { LinkBalance } from "~~/components/chainlink/LinkBalance";
+import { useDeployedContractInfo, useScaffoldReadContract, useScaffoldWriteContract } from "~~/hooks/scaffold-eth";
+import { networks } from "~~/utils/chainlink/networks";
 
 const Sender: React.FC = () => {
-    const contractName = "Sender";
+  const contractName = "Sender";
   const { address, chain } = useAccount();
   const [message, setMessage] = useState("");
   const [destinationNetwork, setDestinationNetwork] = useState("");
@@ -35,13 +35,13 @@ const Sender: React.FC = () => {
       return;
     }
     if (!ccipChainId) {
-        console.log("No ccipChainId available");
-        return;
+      console.log("No ccipChainId available");
+      return;
     }
 
     try {
       console.log("Sending message...");
-        console.log("destinationNetwork message...", ccipChainId);
+      console.log("destinationNetwork message...", ccipChainId);
       await writeSender({
         functionName: "sendMessage",
         args: [BigInt(ccipChainId), address, message],
@@ -59,10 +59,10 @@ const Sender: React.FC = () => {
         <span className="font-bold text-sm">Balance:</span>
         {isPendingSender && <span className="loading loading-spinner loading-xs"></span>}
 
-        {!deployedContractLoading && deployedContractData &&
-        <LinkBalance address={deployedContractData.address} className="px-0 h-1.5 min-h-[0.375rem]" />
-        }
-    </div>
+        {!deployedContractLoading && deployedContractData && (
+          <LinkBalance address={deployedContractData.address} className="px-0 h-1.5 min-h-[0.375rem]" />
+        )}
+      </div>
       <input
         type="text"
         placeholder="Enter your message"
